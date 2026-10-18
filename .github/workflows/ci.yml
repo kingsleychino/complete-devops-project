@@ -38,7 +38,7 @@ jobs:
 
       - name: Update Helm chart with new image tag
         run: |
-          sed -i -E 's/^(\s*tag:).*/\1 "'"$SHORT_SHA"'"/' ./complete-devops-project/values.yaml
-          git add ./complete-devops-project/values.yaml
+          sed -i -E 's/^(\s*tag:).*/\1 "'"$SHORT_SHA"'"/' ./complete-devops-project-time-printer/values.yaml
+          git add ./complete-devops-project-time-printer/values.yaml
           git commit -m "Update image tag to $SHORT_SHA [skip ci]" || echo "No changes"
           git push
