@@ -1,6 +1,6 @@
 image:
   repository: kingsleychino/complete-devops-project
-  tag: latest
+  tag: "def51f1"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
