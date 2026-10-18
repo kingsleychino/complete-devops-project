@@ -21,7 +21,9 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Build Docker image
-        run: docker build -t kingsleychino/complete-devops-project:$SHORT_SHA .
+        run: docker build -t "$IMAGE:$SHORT_SHA" -t "$IMAGE:latest" .
 
       - name: Push to Docker Hub
-        run: docker push kingsleychino/complete-devops-project:$SHORT_SHA
+        run: |
+          docker push "$IMAGE:$SHORT_SHA"
+          docker push "$IMAGE:latest"
