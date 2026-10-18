@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "complete-devops-project/values.yaml"
+
+permissions:
+  contents: write
 
 jobs:
   build_and_push:
@@ -21,9 +26,19 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Build Docker image
-        run: docker build -t "$IMAGE:$SHORT_SHA" -t "$IMAGE:latest" .
+        run: docker build -t "$IMAGE:$SHORT_SHA" .
 
       - name: Push to Docker Hub
+        run: docker push "$IMAGE:$SHORT_SHA"
+
+      - name: Configure Git author
         run: |
-          docker push "$IMAGE:$SHORT_SHA"
-          docker push "$IMAGE:latest"
+          git config --local user.email "kingsleychinono@gmail.com"
+          git config --local user.name "kingsleychino"
+
+      - name: Update Helm chart with new image tag
+        run: |
+          sed -i -E 's/^(\s*tag:).*/\1 "'"$SHORT_SHA"'"/' ./complete-devops-project/values.yaml
+          git add ./complete-devops-project/values.yaml
+          git commit -m "Update image tag to $SHORT_SHA [skip ci]" || echo "No changes"
+          git push
