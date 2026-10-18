@@ -1,0 +1,41 @@
+# This file is maintained automatically by "terraform init".
+# Manual edits may be lost in future updates.
+
+provider "registry.terraform.io/hashicorp/kubernetes" {
+  version = "3.3.0"
+  hashes = [
+    "h1:c1zcjz8POGdzH8AxmxNcsFGEIluS1toQgiQ3Rkh40+c=",
+    "zh:032ef748e64ac668be92dfe383b99f27a57506e1e3555f3c1eccabab852d7ea1",
+    "zh:0e91225427284c67b313fda814439416f83c484c017df5c902992ae936154ae2",
+    "zh:2724542e27e70f6ad98b2a52b9e2ae5a59c6daf5b52433994efa23c3a60ca72c",
+    "zh:2a00499272914259ac0bc098b46b32db7b503bac7cde895975b2e7f26e1c5c90",
+    "zh:3152d82f36512eada40daa35939b2908f0d43f92e6df5d0ea3fb0be77c3b3af1",
+    "zh:402af4bdcd166e13f60d2d2e50252420d2968658a649756908af6cefededd3bc",
+    "zh:6395c7aabb90289138f11ca7e2ae5c190251079d3411678b6d94ec69966a4635",
+    "zh:7967a3ab94d312d6857442fad0f9d187162c3d3f4f7e431505b4c6787b651f12",
+    "zh:8effa0b20b4017f1921efae5d3326132f04f15727c56b37b50f66a67277a435d",
+    "zh:982acde76a4b0277add8c2097d4a903583ef0c335970101ec474ae77c8d5f878",
+    "zh:c853f735e14ca2b61b4489c5168363b8a5e748d87509018c68601047ceb86446",
+    "zh:caec2baae96383d57ade3c1d4200147e34bb9c2fe8cd17f857200a34c64f2b81",
+    "zh:f569b65999264a9416862bca5cd2a6177d94ccb0424f3a4ef424428912b9cb3c",
+  ]
+}
+
+provider "registry.terraform.io/scott-the-programmer/minikube" {
+  version     = "0.4.2"
+  constraints = "0.4.2"
+  hashes = [
+    "h1:kUXMe9QKg/SS9WI36FRVK31z3gj59DaljIJKO0cHH68=",
+    "zh:1c3e89cf19118fc07d7b04257251fc9897e722c16e0a0df7b07fcd261f8c12e7",
+    "zh:74f33b5a5ca42defdf44a2e6c4e08336a353c514f6c37f2ff41b5471324f5b03",
+    "zh:7f2fa2bcc6bde40098647fb171c0fd952a4d9146ab3df113f16b50565359b4fb",
+    "zh:88e01b8a9615d2c9ee8b0b34398ed5b00617ba4581edb2ca50a18608a9642072",
+    "zh:89384deab32270c985f8d0f0e762b483ec37339900ef600156b89ea10f45c77b",
+    "zh:9164e86a0200cf2189ed939a554d1156a1acff67c3f79dfc296d1b9226d1e814",
+    "zh:ab0cb857884de38dcce31b66b112f5a886ef5a85abbaa6e96af3c23f312947af",
+    "zh:bd4fd61701bbc4b6ede08612c7e944813e0948887d666fa0ff64186e97e93c22",
+    "zh:cf48a09a4c92d77f373ea359415087891788ed11a2537000c79600c05524bd26",
+    "zh:fedc68ccc3f1b1447f9ed97e486f30ed526f9e098854dc18f9fc9b26f2f5ec43",
+    "zh:ff97171d251fb6658c729676c62b2315bcc3b056115992dbb19737e6ba550f0d",
+  ]
+}
