@@ -1,6 +1,6 @@
 image:
   repository: kingsleychino/complete-devops-project
-  tag: "cd26be4"
+  tag: "5fb6e36"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
